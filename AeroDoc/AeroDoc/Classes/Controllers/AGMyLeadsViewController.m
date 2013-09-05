@@ -21,6 +21,7 @@
 #import "AGLead.h"
 #import "LeadCell.h"
 #import "AGStatus.h"
+#import "AGDataBase.h"
 
 @implementation AGMyLeadsViewController {
     NSMutableArray *_leads;
@@ -48,7 +49,10 @@
 }
 
 - (void) displayLeads {
-    _leads = [[_localStore readAll] mutableCopy];
+    //_leads = [[_localStore readAll] mutableCopy];
+    AGDataBase *database  = [AGDataBase database];
+    NSArray * leads = [database retrieveLeads];
+    _leads = [NSMutableArray arrayWithArray:leads];
 }
 
 - (void)viewDidUnload {

@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4810B5CC17C3AB8D00E72BFD /* AeroDoc-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4810B5CB17C3AB8D00E72BFD /* AeroDoc-Info.plist */; };
-		4810B5D017C3ACF700E72BFD /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 4810B5CF17C3ACF700E72BFD /* ic_launcher.png */; };
-		4810B5D217C3AD5100E72BFD /* ic_launcher_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 4810B5D117C3AD5100E72BFD /* ic_launcher_114.png */; };
+		4818636B17D767F700D484D3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4818636A17D767F700D484D3 /* libsqlite3.dylib */; };
+		4818636E17D7717900D484D3 /* ic_launcher_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 4818636C17D7717900D484D3 /* ic_launcher_114.png */; };
+		4818636F17D7717900D484D3 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 4818636D17D7717900D484D3 /* ic_launcher.png */; };
+		4818637717D77C8400D484D3 /* AGDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4818637617D77C8400D484D3 /* AGDataBase.m */; };
+		4818637917D8770300D484D3 /* aerodoc.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 4818637817D8770300D484D3 /* aerodoc.sqlite3 */; };
 		481BE86E176F155A00960BDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481BE86D176F155A00960BDF /* UIKit.framework */; };
 		481BE870176F155A00960BDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481BE86F176F155A00960BDF /* Foundation.framework */; };
 		481BE872176F155A00960BDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481BE871176F155A00960BDF /* CoreGraphics.framework */; };
@@ -63,8 +66,12 @@
 /* Begin PBXFileReference section */
 		3ED1957D45914DBAA7632452 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4810B5CB17C3AB8D00E72BFD /* AeroDoc-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AeroDoc-Info.plist"; sourceTree = "<group>"; };
-		4810B5CF17C3ACF700E72BFD /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_launcher.png; path = ../ic_launcher.png; sourceTree = "<group>"; };
-		4810B5D117C3AD5100E72BFD /* ic_launcher_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_launcher_114.png; path = ../ic_launcher_114.png; sourceTree = "<group>"; };
+		4818636A17D767F700D484D3 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		4818636C17D7717900D484D3 /* ic_launcher_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_launcher_114.png; path = Resources/images/ic_launcher_114.png; sourceTree = "<group>"; };
+		4818636D17D7717900D484D3 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_launcher.png; path = Resources/images/ic_launcher.png; sourceTree = "<group>"; };
+		4818637517D77C8400D484D3 /* AGDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGDataBase.h; path = Classes/Model/AGDataBase.h; sourceTree = "<group>"; };
+		4818637617D77C8400D484D3 /* AGDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGDataBase.m; path = Classes/Model/AGDataBase.m; sourceTree = "<group>"; };
+		4818637817D8770300D484D3 /* aerodoc.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; name = aerodoc.sqlite3; path = Resources/aerodoc.sqlite3; sourceTree = "<group>"; };
 		481BE86A176F155A00960BDF /* AeroDoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AeroDoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		481BE86D176F155A00960BDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		481BE86F176F155A00960BDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -122,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4818636B17D767F700D484D3 /* libsqlite3.dylib in Frameworks */,
 				481BE86E176F155A00960BDF /* UIKit.framework in Frameworks */,
 				481BE870176F155A00960BDF /* Foundation.framework in Frameworks */,
 				481BE872176F155A00960BDF /* CoreGraphics.framework in Frameworks */,
@@ -145,6 +153,7 @@
 		481BE861176F155900960BDF = {
 			isa = PBXGroup;
 			children = (
+				4818636A17D767F700D484D3 /* libsqlite3.dylib */,
 				481BE873176F155A00960BDF /* AeroDoc */,
 				481BE89D176F155A00960BDF /* AeroDocTests */,
 				481BE86C176F155A00960BDF /* Frameworks */,
@@ -195,6 +204,7 @@
 		481BE874176F155A00960BDF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4818637817D8770300D484D3 /* aerodoc.sqlite3 */,
 				48C4A9B71796F645000108DF /* main.m */,
 				48C4A9B91796F64E000108DF /* AeroDoc-Prefix.pch */,
 				4810B5CB17C3AB8D00E72BFD /* AeroDoc-Info.plist */,
@@ -256,6 +266,8 @@
 			children = (
 				48C4A9961796F595000108DF /* AGLead.h */,
 				48C4A9971796F595000108DF /* AGLead.m */,
+				4818637517D77C8400D484D3 /* AGDataBase.h */,
+				4818637617D77C8400D484D3 /* AGDataBase.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -271,13 +283,13 @@
 		48E07C43177621B700043C05 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4818636C17D7717900D484D3 /* ic_launcher_114.png */,
+				4818636D17D7717900D484D3 /* ic_launcher.png */,
 				48C139C417C6714A00449D3C /* notification_red.png */,
 				48C139C217C66CDB00449D3C /* user_greyed.png */,
 				48C139BF17C66C7D00449D3C /* user_selected.png */,
 				48C139BA17C66AA900449D3C /* pink_marker_greyed.png */,
 				48C139BB17C66AA900449D3C /* pink_marker_selected.png */,
-				4810B5D117C3AD5100E72BFD /* ic_launcher_114.png */,
-				4810B5CF17C3ACF700E72BFD /* ic_launcher.png */,
 				4885A24617C4C5C600CD6B02 /* aero_greyed.png */,
 				4885A24717C4C5C600CD6B02 /* aero_selected.png */,
 				48E07C44177622A000043C05 /* aerogear_logo.png */,
@@ -385,8 +397,6 @@
 				48C4A9C71796F69B000108DF /* Default@2x.png in Resources */,
 				48C4A9C91796F6B8000108DF /* AeroDocTests-Info.plist in Resources */,
 				4810B5CC17C3AB8D00E72BFD /* AeroDoc-Info.plist in Resources */,
-				4810B5D017C3ACF700E72BFD /* ic_launcher.png in Resources */,
-				4810B5D217C3AD5100E72BFD /* ic_launcher_114.png in Resources */,
 				4885A24817C4C5C600CD6B02 /* aero_greyed.png in Resources */,
 				4885A24917C4C5C600CD6B02 /* aero_selected.png in Resources */,
 				48C139BC17C66AA900449D3C /* pink_marker_greyed.png in Resources */,
@@ -394,6 +404,9 @@
 				48C139C117C66C7D00449D3C /* user_selected.png in Resources */,
 				48C139C317C66CDB00449D3C /* user_greyed.png in Resources */,
 				48C139C517C6714A00449D3C /* notification_red.png in Resources */,
+				4818636E17D7717900D484D3 /* ic_launcher_114.png in Resources */,
+				4818636F17D7717900D484D3 /* ic_launcher.png in Resources */,
+				4818637917D8770300D484D3 /* aerodoc.sqlite3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +480,7 @@
 				48C4A9B11796F5FF000108DF /* AGAppDelegate.m in Sources */,
 				48C4A9B81796F645000108DF /* main.m in Sources */,
 				48C4EAA817CF9FF700E2D71F /* AGStatus.m in Sources */,
+				4818637717D77C8400D484D3 /* AGDataBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
