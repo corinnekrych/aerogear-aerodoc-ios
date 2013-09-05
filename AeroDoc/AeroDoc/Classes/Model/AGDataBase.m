@@ -32,8 +32,15 @@ AGDataBase *_database;
 - (id)init {
     
     if ((self = [super init])) {
-        // TODO read from bundle resources
-        NSString *sqLiteDb = @"/Users/corinne/aerogear/AeroDoc/aerogear-aerodoc-ios/AeroDoc/AeroDoc/Resources/aerodoc.sqlite3";//[[NSBundle mainBundle] pathForResource:@"aerodoc"  ofType:@"sqlite3" inDirectory:@"AeroDoc/Resources"];
+        // TODO cpy database from AeroDoc/Resources to
+        // /Users/corinne/Library/Application Support/iPhone Simulator/6.0/Applications/8DCA886B-6FDD-4017-A883-508BDBD7C7A5/Documents
+        // to have a populated DB
+        // TODO Bootstrap to write in DB
+        
+        // The database is stored in the application bundle.
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *sqLiteDb = [documentsDirectory stringByAppendingPathComponent:@"aerodoc.sqlite3"];
         
         if (sqlite3_open([sqLiteDb UTF8String], (&_database)) != SQLITE_OK) {
             NSLog(@"Failed to open database!");

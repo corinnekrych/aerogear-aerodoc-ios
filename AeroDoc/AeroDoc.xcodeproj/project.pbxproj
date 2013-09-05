@@ -13,6 +13,7 @@
 		4818636F17D7717900D484D3 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 4818636D17D7717900D484D3 /* ic_launcher.png */; };
 		4818637717D77C8400D484D3 /* AGDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4818637617D77C8400D484D3 /* AGDataBase.m */; };
 		4818637917D8770300D484D3 /* aerodoc.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 4818637817D8770300D484D3 /* aerodoc.sqlite3 */; };
+		4818637B17D89A0C00D484D3 /* aerodoc.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 4818637A17D89A0C00D484D3 /* aerodoc.sqlite3 */; };
 		481BE86E176F155A00960BDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481BE86D176F155A00960BDF /* UIKit.framework */; };
 		481BE870176F155A00960BDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481BE86F176F155A00960BDF /* Foundation.framework */; };
 		481BE872176F155A00960BDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481BE871176F155A00960BDF /* CoreGraphics.framework */; };
@@ -72,6 +73,7 @@
 		4818637517D77C8400D484D3 /* AGDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGDataBase.h; path = Classes/Model/AGDataBase.h; sourceTree = "<group>"; };
 		4818637617D77C8400D484D3 /* AGDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGDataBase.m; path = Classes/Model/AGDataBase.m; sourceTree = "<group>"; };
 		4818637817D8770300D484D3 /* aerodoc.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; name = aerodoc.sqlite3; path = Resources/aerodoc.sqlite3; sourceTree = "<group>"; };
+		4818637A17D89A0C00D484D3 /* aerodoc.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; name = aerodoc.sqlite3; path = Resources/aerodoc.sqlite3; sourceTree = "<group>"; };
 		481BE86A176F155A00960BDF /* AeroDoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AeroDoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		481BE86D176F155A00960BDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		481BE86F176F155A00960BDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -283,6 +285,7 @@
 		48E07C43177621B700043C05 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4818637A17D89A0C00D484D3 /* aerodoc.sqlite3 */,
 				4818636C17D7717900D484D3 /* ic_launcher_114.png */,
 				4818636D17D7717900D484D3 /* ic_launcher.png */,
 				48C139C417C6714A00449D3C /* notification_red.png */,
@@ -407,6 +410,7 @@
 				4818636E17D7717900D484D3 /* ic_launcher_114.png in Resources */,
 				4818636F17D7717900D484D3 /* ic_launcher.png in Resources */,
 				4818637917D8770300D484D3 /* aerodoc.sqlite3 in Resources */,
+				4818637B17D89A0C00D484D3 /* aerodoc.sqlite3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
