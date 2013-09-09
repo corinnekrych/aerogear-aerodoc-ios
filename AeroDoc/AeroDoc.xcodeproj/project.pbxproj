@@ -22,6 +22,7 @@
 		481BE8A2176F155A00960BDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 481BE8A0176F155A00960BDF /* InfoPlist.strings */; };
 		4885A24817C4C5C600CD6B02 /* aero_greyed.png in Resources */ = {isa = PBXBuildFile; fileRef = 4885A24617C4C5C600CD6B02 /* aero_greyed.png */; };
 		4885A24917C4C5C600CD6B02 /* aero_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 4885A24717C4C5C600CD6B02 /* aero_selected.png */; };
+		489F47B617DDB17D0072DE0F /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 489F47B517DDB17D0072DE0F /* libsqlite3.0.dylib */; };
 		48C139BC17C66AA900449D3C /* pink_marker_greyed.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C139BA17C66AA900449D3C /* pink_marker_greyed.png */; };
 		48C139BD17C66AA900449D3C /* pink_marker_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C139BB17C66AA900449D3C /* pink_marker_selected.png */; };
 		48C139C117C66C7D00449D3C /* user_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C139BF17C66C7D00449D3C /* user_selected.png */; };
@@ -77,6 +78,7 @@
 		481BE8A1176F155A00960BDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4885A24617C4C5C600CD6B02 /* aero_greyed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = aero_greyed.png; path = Resources/images/aero_greyed.png; sourceTree = "<group>"; };
 		4885A24717C4C5C600CD6B02 /* aero_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = aero_selected.png; path = Resources/images/aero_selected.png; sourceTree = "<group>"; };
+		489F47B517DDB17D0072DE0F /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		48C139BA17C66AA900449D3C /* pink_marker_greyed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pink_marker_greyed.png; path = Resources/images/pink_marker_greyed.png; sourceTree = "<group>"; };
 		48C139BB17C66AA900449D3C /* pink_marker_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pink_marker_selected.png; path = Resources/images/pink_marker_selected.png; sourceTree = "<group>"; };
 		48C139BF17C66C7D00449D3C /* user_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user_selected.png; path = Resources/images/user_selected.png; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				489F47B617DDB17D0072DE0F /* libsqlite3.0.dylib in Frameworks */,
 				481BE86E176F155A00960BDF /* UIKit.framework in Frameworks */,
 				481BE870176F155A00960BDF /* Foundation.framework in Frameworks */,
 				481BE872176F155A00960BDF /* CoreGraphics.framework in Frameworks */,
@@ -145,6 +148,7 @@
 		481BE861176F155900960BDF = {
 			isa = PBXGroup;
 			children = (
+				489F47B517DDB17D0072DE0F /* libsqlite3.0.dylib */,
 				481BE873176F155A00960BDF /* AeroDoc */,
 				481BE89D176F155A00960BDF /* AeroDocTests */,
 				481BE86C176F155A00960BDF /* Frameworks */,
