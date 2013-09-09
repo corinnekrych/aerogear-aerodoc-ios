@@ -68,25 +68,19 @@
     [database executeUpdate:@"insert into lead values (?, ?, ?, ?)",
       @"name2", @"location2", @"222", @"sa2", nil];
     
-    FMResultSet *results = [database executeQuery:@"select oid, name, location, phoneNumber, saleAgent from lead"];
-    while([results next]) {
-        NSString *name = [results stringForColumn:@"name"];
-        NSString *location = [results stringForColumn:@"location"];
-        NSString *phoneNumber = [results stringForColumn:@"phoneNumber"];
-        NSString *saleAgent = [results stringForColumn:@"saleAgent"];
-
-        NSLog(@"lead: %@ - %@ - %@ - %@", name, location, phoneNumber, saleAgent);
-    }
-
     
-    NSDictionary *myLeadsFromDB = [results resultDictionary];
-    NSMutableDictionary *columnsName = [results columnNameToIndexMap];
+    NSMutableArray *results = [NSMutableArray array];
+    
+    FMResultSet *myResults = [database executeQuery:@"select oid, name, location, phoneNumber, saleAgent from lead"];
+    while ([myResults next]) {
+        [results addObject:[myResults resultDictionary]];
+    }
     
     [database close];
     
 
     
-    _leads = [myLeadsFromDB mutableCopy];//[[_localStore readAll] mutableCopy];
+    _leads = [results mutableCopy];//[[_localStore readAll] mutableCopy];
 }
 
 - (void)viewDidUnload {
