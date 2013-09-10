@@ -57,36 +57,40 @@ AGDataBase *_database;
 - (NSArray *)retrieveLeads {
     
     NSMutableArray *retval = [[NSMutableArray alloc] init];
+
     NSString *query = @"SELECT oid, name, location, phoneNumber, saleAgent FROM lead";
     sqlite3_stmt *statement;
     int retCode = sqlite3_prepare_v2(_database, [query UTF8String], -1, &statement, nil);
     if (retCode == SQLITE_OK) {
+        NSMutableDictionary *dict = nil;
         while (sqlite3_step(statement) == SQLITE_ROW) {
-            int uniqueId = sqlite3_column_int(statement, 0);
-            char *nameChars = (char *) sqlite3_column_text(statement, 1);
-            char *locationChars = (char *) sqlite3_column_text(statement, 2);
-            char *phoneNumberChars = (char *) sqlite3_column_text(statement, 3);
-            char *saleAgentChars = (char *) sqlite3_column_text(statement, 4);            
-            
-            NSString *name = [[NSString alloc] initWithUTF8String:nameChars];
-            NSString *location = [[NSString alloc] initWithUTF8String:locationChars];
-            NSString *phoneNumber = [[NSString alloc] initWithUTF8String:phoneNumberChars];
-            NSString *saleAgent = [[NSString alloc] initWithUTF8String:saleAgentChars];
-            
-            NSMutableDictionary *info = [[NSMutableDictionary alloc] init];
-            [info setObject:[NSNumber numberWithInteger:uniqueId] forKey:@"id"];
-            [info setObject:name forKey:@"name"];
-            [info setObject:location forKey:@"location"];
-            [info setObject:phoneNumber forKey:@"phoneNumber"];
-            [info setObject:saleAgent forKey:@"saleAgent"];
-            
-            [retval addObject:info];
-
+            NSUInteger num_cols = (NSUInteger)sqlite3_data_count(statement);
+            if (num_cols > 0) {
+                dict = [NSMutableDictionary dictionaryWithCapacity:num_cols];
+                int columnIdx = 0;
+                for (columnIdx = 0; columnIdx < num_cols; columnIdx++) {
+                    NSString *columnName = [NSString stringWithUTF8String:sqlite3_column_name(statement, columnIdx)];
+                    
+                    if (sqlite3_column_type(statement, columnIdx) == SQLITE_NULL || (columnIdx < 0)) {
+                        return nil;
+                    }
+                    
+                    const char *c = (const char *)sqlite3_column_text(statement, columnIdx);
+                    
+                    if (!c) {
+                        return nil;
+                    }
+                    // TODO need to deal with all types
+                    NSString *objectValue = [NSString stringWithUTF8String:c];
+                    [dict setObject:objectValue forKey:columnName];
+                }
+            } 
+         [retval addObject:dict];
         }
-        sqlite3_finalize(statement);
+        return retval;
+    } else {
+        return nil;
     }
-    return retval;
-    
 }
 
 
