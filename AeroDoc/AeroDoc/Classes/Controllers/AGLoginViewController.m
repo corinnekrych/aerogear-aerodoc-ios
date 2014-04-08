@@ -34,8 +34,7 @@
     CLLocationManager *_locationManager;
 }
 
-@synthesize deviceToken = _deviceToken;
-@synthesize tabController = _tabController;
+registerWithClientInfo@synthesize tabController = _tabController;
 
 - (void)viewDidUnload {
     [super viewDidUnload];
@@ -196,9 +195,9 @@
         [clientInfo setDeviceType: [currentDevice model]];
         
     } success:^() {
-        DLog(@"PushEE registration successful");
+        DLog(@"UnifiedPush registration successful");
     } failure:^(NSError *error) {
-        DLog(@"PushEE registration Error: %@", error);
+        DLog(@"UnifiedPush registration Error: %@", error);
     }];
 #endif
 }
